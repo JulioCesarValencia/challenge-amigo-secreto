@@ -17,3 +17,13 @@ function agregarAmigo() {
 function limpiarCaja() {
     let valorCaja = document.getElementById("amigo").value = "";
 }
+
+
+function asignarTextoElemento(elemento, texto) {
+    let elementoHtml = document.querySelector(elemento);
+    elementoHtml.textContent = texto;
+    return;
+}
+
+asignarTextoElemento('h1', 'Amigo Secreto');
+asignarTextoElemento('h2', 'Digite el nombre de sus amigos');
