@@ -3,7 +3,7 @@ let amigos = [];
 
 
 
-
+//evento para el boton anadir
 function agregarAmigo() {
     let amigoAAgregar = document.getElementById("amigo").value.trim();
     if (amigoAAgregar==="") {
@@ -11,19 +11,9 @@ function agregarAmigo() {
     } else {
     amigos.push(amigoAAgregar);
     limpiarCaja(); 
-    return console.log(amigos);
+    console.log(amigos);
     }
 }
 function limpiarCaja() {
     let valorCaja = document.getElementById("amigo").value = "";
 }
-
-
-function asignarTextoElemento(elemento, texto) {
-    let elementoHtml = document.querySelector(elemento);
-    elementoHtml.textContent = texto;
-    return;
-}
-
-asignarTextoElemento('h1', 'Amigo Secreto');
-asignarTextoElemento('h2', 'Digite el nombre de sus amigos');
