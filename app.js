@@ -8,12 +8,31 @@ function agregarAmigo() {
     let amigoAAgregar = document.getElementById("amigo").value.trim();
     if (amigoAAgregar==="") {
         alert("campo invalido!");
-    } else {
-    amigos.push(amigoAAgregar);
-    limpiarCaja(); 
-    return console.log(amigos);
+        return;
     }
+//validar amigo a incluir
+        if (amigos.includes(amigoAAgregar)) {
+            alert("Este nombre ya esta incluido!");
+            return;
+        }    
+            amigos.push(amigoAAgregar);
+            limpiarCaja();
+            console.log(amigos);    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function limpiarCaja() {
     let valorCaja = document.getElementById("amigo").value = "";
 }
