@@ -49,9 +49,68 @@ function listaEnPantalla() {
 }
 
 
+function sortearAmigo() {
+    if (amigos.length >= 2) {
+        let resultado = Math.floor(Math.random()*amigos.length);
+        let amigoSecreto = amigos[resultado];
+        let listaResultado=document.getElementById("resultado");
+        listaResultado.innerHTML=`<li>Tu amigo secreto es ${amigoSecreto}</li>`;
+    }
+}        
+
 
 function limpiarCaja() {
     document.getElementById("amigo").value = "";
 }
+
+
+
+//mejor practica pero no era lo solicitdo por el desafio
+/*function sortearAmigo() {
+    if (amigos.length >= 2) {
+        let resultado = Math.floor(Math.random()*amigos.length);
+        let amigoSecreto = amigos[resultado];
+        let listaResultado=document.getElementById("resultado");
+        listaResultado.innerHTML="";
+        let crearLiResultado = document.createElement("li");
+        crearLiResultado.textContent=`Tu amigo secreto es ${amigoSecreto}`;
+        listaResultado.appendChild(crearLiResultado)
+        console.log(amigoSecreto);
+    } else {
+        alert("amigos insuficientes");
+    }
+}*/
+
+    
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
