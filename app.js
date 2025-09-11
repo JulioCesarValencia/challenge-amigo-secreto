@@ -27,13 +27,12 @@ function agregarAmigo() {
             alert("Este nombre ya esta incluido!");
             return;
         }    
+        //de lo contrario añadir
             amigos.push(amigoAAgregar);
             listaEnPantalla();
             limpiarCaja();
             console.log(amigos);    
 }
-
-
 
 //muestra lista en pantalla
 function listaEnPantalla() {
@@ -42,8 +41,10 @@ function listaEnPantalla() {
     lista.innerHTML = "";
 
     for (let intentos=0; intentos < amigos.length; intentos++) {
+        //crea el elemento "li"
         let crearLista=document.createElement("li");
         crearLista.textContent=amigos[intentos];
+        //añadimos el elemento "li" al final de la etiqueta <ul>
         lista.appendChild(crearLista);
     }
 }
@@ -51,10 +52,20 @@ function listaEnPantalla() {
 
 function sortearAmigo() {
     if (amigos.length >= 2) {
+        //busca el amigo aleatorio en base a las posiciones dentro del array
         let resultado = Math.floor(Math.random()*amigos.length);
         let amigoSecreto = amigos[resultado];
+        //hacemos la asignacion en el html
         let listaResultado=document.getElementById("resultado");
         listaResultado.innerHTML=`<li>Tu amigo secreto es ${amigoSecreto}</li>`;
+        //desactivamos el boton sortear amigos para que el usuario no pueda sobre-sortear
+        document.querySelector(".button-draw").disabled = true;
+        //desabilita el campo de entrada del nombre
+        document.getElementById('amigo').disabled = true;
+        //deshabilitamos boton añadir
+        document.querySelector('.button-add').disabled = true;
+        //activamos el boton nuevo juego
+        document.getElementById('reiniciar').disabled = false;
     }
 }        
 
@@ -63,23 +74,22 @@ function limpiarCaja() {
     document.getElementById("amigo").value = "";
 }
 
+function reiniciarJuego() {
+    //limpia: array, lista en pantalla y el resultado
+    amigos=[];
+    document.getElementById("listaAmigos").innerHTML = '';
+    document.getElementById("resultado").innerHTML = '';
+    //habilitamos el boton añadir y el campo de texto para el usuario
+    document.querySelector(".button-add").disabled = false;
+    document.getElementById("amigo").disabled = false;
+    //desbloqueamos el boton sortear amigos
+    document.querySelector(".button-draw").disabled = false;
+    //deshabilitamos el boton nuevo juego
+    document.getElementById("reiniciar").disabled = false;
+}
 
 
-//mejor practica pero no era lo solicitdo por el desafio
-/*function sortearAmigo() {
-    if (amigos.length >= 2) {
-        let resultado = Math.floor(Math.random()*amigos.length);
-        let amigoSecreto = amigos[resultado];
-        let listaResultado=document.getElementById("resultado");
-        listaResultado.innerHTML="";
-        let crearLiResultado = document.createElement("li");
-        crearLiResultado.textContent=`Tu amigo secreto es ${amigoSecreto}`;
-        listaResultado.appendChild(crearLiResultado)
-        console.log(amigoSecreto);
-    } else {
-        alert("amigos insuficientes");
-    }
-}*/
+
 
     
     
