@@ -2,7 +2,7 @@
 
 
 let amigos = [];
-
+let lista="";
 
 //escalabilidad y buena practica
 function asignarTextoElemento(elemento, texto) {
@@ -36,7 +36,7 @@ function agregarAmigo() {
 
 //muestra lista en pantalla
 function listaEnPantalla() {
-    let lista = document.getElementById("listaAmigos");
+    lista = document.getElementById("listaAmigos");
     //limpia la lista existente
     lista.innerHTML = "";
 
@@ -58,6 +58,8 @@ function sortearAmigo() {
         //hacemos la asignacion en el html
         let listaResultado=document.getElementById("resultado");
         listaResultado.innerHTML=`<li>Tu amigo secreto es ${amigoSecreto}</li>`;
+        //borrar lista al mostrar el amigo secreto
+        lista.innerHTML = "";
         //desactivamos el boton sortear amigos para que el usuario no pueda sobre-sortear
         document.querySelector(".button-draw").disabled = true;
         //desabilita el campo de entrada del nombre
