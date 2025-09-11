@@ -15,6 +15,11 @@
 
 # 🎁Amigo Secreto
 
+¡Escanea este código QR para jugar en tu teléfono! 📱
+<br>
+<img width="200" height="273" alt="qr" src="https://github.com/user-attachments/assets/e33b764d-ec07-410f-949f-4e22193487ac" />
+
+
 ### 📖Indice
 
 - [Descripcion del proyecto](#descripcion-del-proyecto)
