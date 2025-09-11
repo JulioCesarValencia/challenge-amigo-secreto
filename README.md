@@ -42,6 +42,7 @@ Este es un proyecto simple, ideal para principiantes en JavaScript, que te permi
 - **Agregar amigos**: Permite añadir los nombres de los participantes al juego.
 - **Sortear amigos**: Inicia un sorteo aleatorio de tus amigos añadidos para escoger un amigo secreto.
 - **Validación de entrada**: El sistema verifica que no se ingresen nombres vacíos y que no se repitan los nombres de los amigos.
+- **Juego nuevo**: Un camino rapido para iniciar un nuevo juego.
 
 ## Aplicacion
 
@@ -65,9 +66,7 @@ Aquí puedes ver una demostración rápida de cómo funciona la aplicación:
 - Editor de GIF: Herramienta utilizada para optimizar y comprimir la demostración visual del proyecto, asegurando una carga rápida y de alta calidad.
 
 ## 🚀Acceso al proyecto
-
-💻 Acceso al Proyecto
-Juega ahora: Enlace Github page:___
+Juega ahora: https://juliocesarvalencia.github.io/juego-amigo-secreto/
 
 Para clonar y ejecutar este proyecto de forma local, sigue estos pasos:
 
