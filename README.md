@@ -8,7 +8,7 @@
 
 <p align="center">
   <img src="http://img.shields.io/static/v1?label=STATUS&message=TEMINADO&color=RED&style=for-the-badge" />
-  <img src="http://img.shields.io/static/v1?label=RELEASE&message=EM%20AGOSTO&color=RED&style=for-the-badge" />
+  <img src="http://img.shields.io/static/v1?label=RELEASE&message=EM%20SEPTIEMBRE&color=RED&style=for-the-badge" />
 </p>
 
 
